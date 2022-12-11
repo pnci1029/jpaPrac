@@ -1,5 +1,6 @@
 package com.jpa.main;
 
+import com.jpa.main.main.Book;
 import com.jpa.main.main.Member;
 import com.jpa.main.main.Order;
 
@@ -18,6 +19,9 @@ public class JPA {
         transaction.begin();
 
 
+        Book book = new Book();
+        book.setName("book1");
+        em.persist(book);
 
         try {
             transaction.commit();
